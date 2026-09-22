@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Meridian · Zoom sign-in</title>
+<link rel="stylesheet" href="../../style.css">
+<script>
+// Zoom only redirects to web addresses, so it sends the sign-in result here and this page hands it
+// to Meridian, which is listening on this Mac. Nothing is stored; the one-time code is useless without
+// the secret Meridian keeps on the Mac (PKCE).
+if (new URLSearchParams(location.search).has("state")) {
+  location.replace("http://127.0.0.1:52917/oauth-callback" + location.search);
+}
+</script>
+</head>
+<body>
+<main>
+<nav><a href="../../">Meridian</a><a href="../../privacy.html">Privacy Policy</a></nav>
+<h1>Zoom sign-in</h1>
+<p>This page passes your Zoom sign-in back to Meridian on your Mac. If nothing happens, return to Meridian and start the sign-in again from Settings › Accounts.</p>
+</main>
+</body>
+</html>

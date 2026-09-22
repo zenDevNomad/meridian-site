@@ -11,17 +11,18 @@
 <main>
 <nav><a href="./">Meridian</a><a href="privacy.html">Privacy Policy</a></nav>
 <h1>Privacy Policy</h1>
-<p class="muted">Last updated 8 September 2026</p>
+<p class="muted">Last updated 23 September 2026</p>
 
 <p>Meridian is a calendar application for macOS developed by Maximilian Ralser. This policy explains what data the app handles and where it goes. The short version: everything stays on your Mac, and the developer never receives your data.</p>
 
 <h2>No servers, no accounts with us</h2>
-<p>Meridian has no backend. The app talks directly from your Mac to the calendar services you connect (Apple iCloud, Google Calendar, Microsoft 365, or any CalDAV server). There is no Meridian account, no sign-up, and no data passes through infrastructure operated by the developer.</p>
+<p>Meridian has no backend. The app talks directly from your Mac to the calendar and meeting services you connect (Apple iCloud, Google Calendar, Microsoft 365, Microsoft Teams, Zoom, or any CalDAV server). There is no Meridian account, no sign-up, and no data passes through infrastructure operated by the developer.</p>
 
 <h2>Data the app accesses</h2>
 <ul>
 <li><strong>Calendar data.</strong> Meridian reads your calendars and events and, when you create or edit an event, writes those changes back to the service you chose. A copy of your events is cached in a local database on your Mac so the app works offline and starts quickly.</li>
-<li><strong>Account identity.</strong> When you sign in with Google or Microsoft, the app reads your email address to label the account in its settings.</li>
+<li><strong>Account identity.</strong> When you sign in with Google, Microsoft or Zoom, the app reads your email address to label the account in its settings.</li>
+<li><strong>Online meetings.</strong> If you connect Microsoft Teams or Zoom and choose it for an event, Meridian creates a meeting in that account with the event's title and time, and adds the meeting link to the event. It does not read your existing meetings.</li>
 <li><strong>Sign-in credentials.</strong> OAuth refresh tokens, app-specific passwords, and CalDAV passwords are stored in the macOS Keychain on your Mac and are never transmitted anywhere other than to the service they belong to.</li>
 <li><strong>Weather location.</strong> If you enable the optional weather feature, the place name you enter is sent to Open-Meteo to fetch a forecast. Open-Meteo's handling of that request is described in its own <a href="https://open-meteo.com/en/terms">terms</a>. No other location data is collected.</li>
 </ul>
@@ -36,8 +37,11 @@
 <li>No sharing or selling of data.</li>
 </ul>
 
+<h2>Zoom sign-in page</h2>
+<p>Zoom only returns sign-ins to a web address, so it sends them to a page on this site that immediately passes the result to Meridian on your Mac. The page stores nothing. The one-time sign-in code it forwards cannot be used without a secret that never leaves your Mac.</p>
+
 <h2>Removing your data</h2>
-<p>Removing an account in Meridian's settings deletes its cached events and its credentials from the Keychain. To revoke Meridian's access to your Google account, visit <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. For Microsoft accounts, use <a href="https://account.live.com/consent/Manage">account.live.com/consent/Manage</a>. Deleting the app removes all remaining local data.</p>
+<p>Removing an account in Meridian's settings deletes its cached events and its credentials from the Keychain. To revoke Meridian's access to your Google account, visit <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. For Microsoft accounts, use <a href="https://account.live.com/consent/Manage">account.live.com/consent/Manage</a> or, for work accounts, <a href="https://myapps.microsoft.com">myapps.microsoft.com</a>. For Zoom, remove Meridian under Added Apps in the <a href="https://marketplace.zoom.us/user/installed">Zoom App Marketplace</a>. Deleting the app removes all remaining local data.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the updated version is published on this page with a new date.</p>
